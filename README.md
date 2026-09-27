@@ -8,32 +8,32 @@ ACM Multimedia 2026 英文论文海报，A0 竖版（841 × 1189 mm）。
 
 ## 最新版本
 
-- [第三版印刷 PDF](output/SegmentGDA_ACMMM2026_A0_v3.pdf)
-- [第三版可编辑 SVG](output/SegmentGDA_ACMMM2026_A0_v3_editable.svg)
+- [第四版印刷 PDF](output/SegmentGDA_ACMMM2026_A0_v4.pdf)
+- [第四版可编辑 SVG](output/SegmentGDA_ACMMM2026_A0_v4_editable.svg)
 - [制作与印刷说明](output/制作与印刷说明.md)
-- [第三版调整说明](output/第三版调整说明.md)
+- [第四版调整说明](output/第四版调整说明.md)
 
-![第三版海报预览](output/SegmentGDA_ACMMM2026_preview_v3.png)
+![第四版海报预览](output/SegmentGDA_ACMMM2026_preview_v4.png)
 
 ## 目录
 
-- `output/`：历版海报、预览和说明；推荐使用带 `v3` 的文件。第三版使用跨方法的 5-shot 对比主表，移除独立消融区，保留单样本结果作为辅助说明。
+- `output/`：历版海报、预览和说明；推荐使用带 `v4` 的文件。第四版优化字体与排版，沿用第三版的基线对比和实验内容，保留原论文方法图。
 - `source/`：生成脚本及论文图像素材。
 - `3767308.3835710.pdf`：海报内容对应的论文。
 
 ## 重新生成
 
-依赖 Python、ReportLab、pypdf、Pillow，以及 Poppler 的 `pdftocairo`。当前脚本使用 Windows 的 `C:/Windows/Fonts/arial.ttf` 和 `arialbd.ttf`；其他系统需调整字体路径。
+依赖 Python、ReportLab、pypdf、Pillow，以及 Poppler 的 `pdftocairo`。第四版使用 Windows 的 `C:/Windows/Fonts/segoeui.ttf` 和 `seguisb.ttf`；其他系统需调整字体路径。编辑 SVG 时也需安装对应的 Segoe UI 字体；PDF 已嵌入使用的字体子集。
 
 ```sh
 python -m pip install reportlab pypdf pillow
-python source/build_poster_v3.py
+python source/build_poster_v4.py
 ```
 
 脚本从原论文提取素材，输出 PDF 和 SVG。预览可使用 Poppler 生成：
 
 ```sh
-pdftoppm -scale-to 1800 -singlefile -png output/SegmentGDA_ACMMM2026_A0_v3.pdf output/SegmentGDA_ACMMM2026_preview_v3
+pdftoppm -scale-to 1800 -singlefile -png output/SegmentGDA_ACMMM2026_A0_v4.pdf output/SegmentGDA_ACMMM2026_preview_v4
 ```
 
 ## 参考
