@@ -8,16 +8,16 @@ ACM Multimedia 2026 英文论文海报，A0 竖版（841 × 1189 mm）。
 
 ## 最新版本
 
-- [第二版印刷 PDF](output/SegmentGDA_ACMMM2026_A0_v2.pdf)
-- [第二版可编辑 SVG](output/SegmentGDA_ACMMM2026_A0_v2_editable.svg)
+- [第三版印刷 PDF](output/SegmentGDA_ACMMM2026_A0_v3.pdf)
+- [第三版可编辑 SVG](output/SegmentGDA_ACMMM2026_A0_v3_editable.svg)
 - [制作与印刷说明](output/制作与印刷说明.md)
-- [第二版调整说明](output/第二版调整说明.md)
+- [第三版调整说明](output/第三版调整说明.md)
 
-![第二版海报预览](output/SegmentGDA_ACMMM2026_preview_v2.png)
+![第三版海报预览](output/SegmentGDA_ACMMM2026_preview_v3.png)
 
 ## 目录
 
-- `output/`：两版海报、预览和说明；推荐使用带 `v2` 的文件。
+- `output/`：历版海报、预览和说明；推荐使用带 `v3` 的文件。第三版使用跨方法的 5-shot 对比主表，移除独立消融区，保留单样本结果作为辅助说明。
 - `source/`：生成脚本及论文图像素材。
 - `3767308.3835710.pdf`：海报内容对应的论文。
 
@@ -27,13 +27,13 @@ ACM Multimedia 2026 英文论文海报，A0 竖版（841 × 1189 mm）。
 
 ```sh
 python -m pip install reportlab pypdf pillow
-python source/build_poster_v2.py
+python source/build_poster_v3.py
 ```
 
 脚本从原论文提取素材，输出 PDF 和 SVG。预览可使用 Poppler 生成：
 
 ```sh
-pdftoppm -scale-to 1800 -singlefile -png output/SegmentGDA_ACMMM2026_A0_v2.pdf output/SegmentGDA_ACMMM2026_preview_v2
+pdftoppm -scale-to 1800 -singlefile -png output/SegmentGDA_ACMMM2026_A0_v3.pdf output/SegmentGDA_ACMMM2026_preview_v3
 ```
 
 ## 参考
